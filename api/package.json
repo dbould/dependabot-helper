@@ -1,0 +1,26 @@
+{
+  "name": "dependabot-helper",
+  "version": "1.0.0",
+  "description": "Collects dependabot warnings from multiple repos in a single place. Send them off to the internets to register risk",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "dependabot-helper"
+  },
+  "author": "Dave Bould",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.17.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "react-bootstrap": "^1.4.3"
+  }
+}
