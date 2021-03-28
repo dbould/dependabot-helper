@@ -1,3 +1,11 @@
 class Github {
-    get
+    constructor() {
+
+    }
+
+    getAlertsForOrganisation() {
+        return {'key':'value'};
+    }
 }
+
+module.exports = Github;
