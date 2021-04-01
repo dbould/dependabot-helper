@@ -13,8 +13,10 @@ router.get("/dependabot-alerts/all", function(request, response, next) {
         process.env.GITHUB_TOKEN
     );
     response.setHeader('Content-Type', 'application/json');
-    response.send(JSON.stringify(githubService.getAlertsForOrganisation()));
-    response.end();
+    githubService.getAlertsForOrganisation().then((alerts) => {
+        response.send(JSON.stringify(alerts));
+        response.end();
+    });
 });
 
 module.exports = router;
