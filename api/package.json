@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,14 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "react-bootstrap": "^1.4.3"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
