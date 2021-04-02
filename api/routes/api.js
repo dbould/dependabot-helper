@@ -6,7 +6,7 @@ router.get("/", function(req, res, next) {
 res.send("API is working properly moo");
 });
 
-router.get("/dependabot-alerts/all", function(request, response, next) {
+router.get("/dependabot-alerts", function(request, response, next) {
     const githubService = new GithubService(
         process.env.GITHUB_URL,
         process.env.GITHUB_REPOSITORY,
