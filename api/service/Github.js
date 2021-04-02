@@ -2,7 +2,8 @@ const { GraphQLClient, gql } = require('graphql-request')
 
 class Github {
 
-    constructor(githubRepository, githubOrganisation, githubToken) {
+    constructor(githubUrl, githubRepository, githubOrganisation, githubToken) {
+        this.githubUrl = githubUrl;
         this.githubRepository = githubRepository;
         this.githubOrganisation = githubOrganisation;
         this.githubToken = githubToken;
@@ -28,7 +29,7 @@ class Github {
                 }
         }`
 
-        const endpoint = 'https://api.github.com/graphql';
+        const endpoint = this.githubUrl;
 
         const graphQLClient = new GraphQLClient(endpoint, {
             headers: {
