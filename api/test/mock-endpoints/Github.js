@@ -1,10 +1,10 @@
 class Github {
     getVulnerabilities(repository, owner, authorization) {
         //if owner is set to ?
-        //else return bad repository respomse
+        //else return bad repository response
 
         //if owner is set to ?
-        //else return bad owner respomse
+        //else return bad owner response
 
         //if authorization is set to ?
         //else return bad auth response
