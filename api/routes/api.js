@@ -20,4 +20,17 @@ router.get("/dependabot-alerts", function(request, response, next) {
     });
 });
 
+router.post('/get-vulnerabilities', function (request,
+                                              response, next) {
+    console.log("wooooff")
+    const github = new githubMock();
+    response.send(github.getVulnerabilities(
+        process.env.GITHUB_URL,
+        process.env.GITHUB_REPOSITORY,
+        process.env.GITHUB_ORG,
+        process.env.GITHUB_TOKEN
+    ));
+    response.end();
+});
+
 module.exports = router;

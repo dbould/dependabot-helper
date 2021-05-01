@@ -29,9 +29,7 @@ class Github {
                 }
         }`
 
-        const endpoint = this.githubUrl;
-
-        const graphQLClient = new GraphQLClient(endpoint, {
+        const graphQLClient = new GraphQLClient(this.githubUrl, {
             headers: {
                 authorization: 'Bearer ' + this.githubToken,
             },

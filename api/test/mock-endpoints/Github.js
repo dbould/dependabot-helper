@@ -1,4 +1,8 @@
 class Github {
+    constructor() {
+
+    }
+
     getVulnerabilities(repository, owner, authorization) {
         //if owner is set to ?
         //else return bad repository response
@@ -8,7 +12,6 @@ class Github {
 
         //if authorization is set to ?
         //else return bad auth response
-
         switch (repository) {
             case "moo":
                 return this.mooResponse();
@@ -16,7 +19,7 @@ class Github {
                 return this.cluckResponse();
                 break;
             default:
-                return this.repositoryNotFoundResponse()
+                return this.repositoryNotFoundResponse();
         }
     }
 
@@ -207,9 +210,11 @@ class Github {
                             "column": 5
                         }
                     ],
-                    "message": "Could not resolve to a Repository with the name 'dbould/slim3-react-skeletons'."
+                    "message": "Could not resolve to a Repository with the name 'cluck cluck mooooo'."
                 }
             ]
         }
     }
 }
+
+module.exports = Github;
