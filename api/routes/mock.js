@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 var githubMock = require("../test/mock-endpoints/Github");
-var { introspectionQuery } = require('graphql');
 
 router.post('/get-vulnerabilities', function (request,
                                                         response, next) {
